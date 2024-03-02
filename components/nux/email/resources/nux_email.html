@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html dir="$i18n{textdirection}" lang="$i18n{language}">
+<head>
+  <meta charset="utf-8">
+  <title>TODO_TITLE</title>
+  <link rel="import" href="chrome://resources/html/polymer.html">
+  <link rel="import" href="chrome://welcome/email/email_chooser.html">
+  <link rel="import" href="chrome://welcome/email/nux_email_proxy.html">
+  <link rel="stylesheet" href="chrome://resources/css/text_defaults_md.css">
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
+  <dom-module id="nux-email">
+    <template>
+      <style>
+        :host {
+          align-items: center;
+          display: flex;
+          height: 100vh;
+          justify-content: space-around;
+        }
+
+        .email-ask {
+          text-align: center;
+          width: 800px;
+        }
+
+        .email-logo {
+          background: red; /* TODO(scottchen): replace with logo. */
+          height: 36px;
+          margin: auto;
+          margin-bottom: 16px;
+          width: 36px;
+        }
+
+        h1 {
+          color: #202124;
+          font-weight: 500;
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+          margin: 0;
+        }
+
+        h2 {
+          color: #202124;
+          font-weight: unset;
+          font-size: 1.125rem;
+          line-height: 2rem;
+          margin: 0;
+          margin-bottom: 48px;
+        }
+
+        #emailChooser {
+          color: #202124;
+          margin-bottom: 48px;
+        }
+      </style>
+      <div class="email-ask">
+        <div class="email-logo"></div>
+        <h1>TODO_HEADER</h1>
+        <h2>TODO_SUBHEADER</h2>
+        <email-chooser id="emailChooser"></email-chooser>
+      </div>
+    </template>
+    <script src="email/nux_email.js"></script>
+  </dom-module>
+</head>
+<body>
+  <nux-email></nux-email>
+</body>
+</html>

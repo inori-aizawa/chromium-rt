@@ -1,0 +1,22 @@
+Name: fontconfig
+URL: http://www.freedesktop.org/wiki/Software/fontconfig/
+Version: d1f48f11d5dffa1d954a1b0abe44ce9e4bfc3709
+License: MIT
+License File: src/COPYING
+Security Critical: yes
+
+Description:
+Fontconfig is a library for configuring and customizing font access.
+
+Modifications:
+- None
+
+To import a new snapshot of fontconfig:
+- Checkout the latest revision:
+    git fetch origin master
+    git checkout origin/master
+- Change the DEPS entry to the newly checked out commit.
+- Update generated files:
+    ./autogen.sh --enable-libxml2 --disable-docs && make
+    rsync -R $(git ls-files --others '*.h' '*/*.h') ../include
+- Update this README to reflect the new version number.
