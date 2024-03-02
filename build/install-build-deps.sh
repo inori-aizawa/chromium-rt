@@ -81,33 +81,6 @@ if ! which lsb_release > /dev/null; then
   exit 1;
 fi
 
-distro_codename=$(lsb_release --codename --short)
-distro_id=$(lsb_release --id --short)
-supported_codenames="(trusty|xenial|artful|bionic)"
-supported_ids="(Debian)"
-if [ 0 -eq "${do_unsupported-0}" ] && [ 0 -eq "${do_quick_check-0}" ] ; then
-  if [[ ! $distro_codename =~ $supported_codenames &&
-        ! $distro_id =~ $supported_ids ]]; then
-    echo -e "ERROR: The only supported distros are\n" \
-      "\tUbuntu 14.04 LTS (trusty)\n" \
-      "\tUbuntu 16.04 LTS (xenial)\n" \
-      "\tUbuntu 17.10 (artful)\n" \
-      "\tUbuntu 18.04 LTS (bionic)\n" \
-      "\tDebian 8 (jessie) or later" >&2
-    exit 1
-  fi
-
-  if ! uname -m | egrep -q "i686|x86_64"; then
-    echo "Only x86 architectures are currently supported" >&2
-    exit
-  fi
-fi
-
-if [ "x$(id -u)" != x0 ] && [ 0 -eq "${do_quick_check-0}" ]; then
-  echo "Running as non-root user."
-  echo "You might have to enter your password one or more times for 'sudo'."
-  echo
-fi
 
 # Packages needed for chromeos only
 chromeos_dev_list="libbluetooth-dev libxkbcommon-dev"
