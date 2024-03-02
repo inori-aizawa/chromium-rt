@@ -1,11 +1,11 @@
-# ![Logo](chrome/app/theme/chromium/product_logo_64.png) Chromium
+# ![Logo](chrome/app/theme/chromium/product_logo_64.png) Chromium - Proof of Concept for Windows RT
+This is a port of Chromium for Windows on ARMv7. Don't expect me to add a lot of releases. Also, it will NOT build yet and it WILL error out when trying to
+## Features
+- Based on Chromium 70.0.3536.0
+- Targeted towards Windows on ARMv7 (Windows RT and Windows 10 build 15035)
+## Upcoming features
+- Optimizations for ARMv7 chips
+- Compiler optimizations
+- More codecs
 
-Chromium is an open-source browser project that aims to build a safer, faster,
-and more stable way for all users to experience the web.
-
-The project's web site is https://www.chromium.org.
-
-Documentation in the source is rooted in [docs/README.md](docs/README.md).
-
-Learn how to [Get Around the Chromium Source Code Directory Structure
-](https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code).
+If you would like to contribute, feel free to. I have too many projects to deal with and I don't have a lot of time to port this.
