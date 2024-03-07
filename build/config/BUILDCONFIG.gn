@@ -192,11 +192,11 @@ if (host_toolchain == "") {
       # build, and there is no way to indicate that you want to override
       # it for both the target build *and* the host build. Do we need to
       # support this?
-      host_toolchain = "//build/toolchain/linux:clang_$host_cpu"
+      host_toolchain = "$home/armmxe-shared/usr/bin/armv7-w64-mingw32-clang"
     } else if (is_clang) {
-      host_toolchain = "//build/toolchain/linux:clang_$host_cpu"
+      host_toolchain = "$home/armmxe-shared/usr/bin/armv7-w64-mingw32-clang"
     } else {
-      host_toolchain = "//build/toolchain/linux:$host_cpu"
+      host_toolchain = "$home/armmxe-shared/usr/bin/armv7-w64-mingw32-clang"
     }
   } else if (host_os == "mac") {
     host_toolchain = "//build/toolchain/mac:clang_$host_cpu"
@@ -497,7 +497,6 @@ if (!is_chromeos) {
 # (FreeBSD, etc.) toolkits, (X11, GTK, etc.), or features. For these cases,
 # write a conditional in the target to remove the file(s) from the list when
 # your platform/toolkit/feature doesn't apply.
-set_sources_assignment_filter(sources_assignment_filter)
 
 # =============================================================================
 # TARGET DEFAULTS
